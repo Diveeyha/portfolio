@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import ConfusionMatrixDisplay, RocCurveDisplay, PrecisionRecallDisplay
 from sklearn.metrics import precision_score, recall_score 
 
-userDir = os.path.expanduser('~')
+userDir = os.path.dirname(__file__)
 
 
 @st.cache_data(persist=True)
