@@ -11,12 +11,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import ConfusionMatrixDisplay, RocCurveDisplay, PrecisionRecallDisplay
 from sklearn.metrics import precision_score, recall_score 
 
-userDir = os.path.expanduser('~')
+userDir = os.path.dirname(__file__)
 
 
 @st.cache_data(persist=True)
 def load_data():
-    data = pd.read_csv(userDir + '/PycharmProjects/pythonProject/mushrooms.csv')
+    data = pd.read_csv(userDir + '/mushrooms.csv')
     label = LabelEncoder()
     for col in data.columns:
         data[col] = label.fit_transform(data[col])
