@@ -63,8 +63,8 @@ def plot_metrics(metrics_list, model, x_test, y_test, class_names):
 
 
 def main():
-    st.title("Binary Classification Web App")
-    st.markdown("Are your mushrooms edible or poisonous? 🍄")
+    st.sidebar.title("Binary Classification Web App")
+    st.title("Are your mushrooms edible or poisonous? 🍄")
 
     df = load_data()
 
