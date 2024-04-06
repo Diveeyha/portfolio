@@ -11,12 +11,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import ConfusionMatrixDisplay, RocCurveDisplay, PrecisionRecallDisplay
 from sklearn.metrics import precision_score, recall_score 
 
-userDir = os.path.dirname(__file__)
+userDir = os.path.expanduser('~')
 
 
 @st.cache_data(persist=True)
 def load_data():
-    data = pd.read_csv(userDir + '/mushrooms.csv')
+    data = pd.read_csv(userDir + '/PycharmProjects/pythonProject/mushrooms.csv')
     label = LabelEncoder()
     for col in data.columns:
         data[col] = label.fit_transform(data[col])
@@ -63,8 +63,8 @@ def plot_metrics(metrics_list, model, x_test, y_test, class_names):
 
 
 def main():
-    st.sidebar.subheader("Binary Classification")
-    st.subheader("Are your mushrooms edible or poisonous? 🍄")
+    st.sidebar.title("Binary Classification Web App")
+    st.title("Are your mushrooms edible or poisonous? 🍄")
 
     df = load_data()
 
