@@ -16,7 +16,7 @@ userDir = os.path.expanduser('~')
 
 @st.cache_data(persist=True)
 def load_data():
-    data = pd.read_csv(userDir + '/PycharmProjects/pythonProject/mushrooms.csv')
+    data = pd.read_csv(userDir + '/portfolio/pages/mushrooms.csv')
     label = LabelEncoder()
     for col in data.columns:
         data[col] = label.fit_transform(data[col])
