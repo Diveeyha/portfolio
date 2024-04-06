@@ -26,3 +26,10 @@ st.markdown(
     - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
 """
 )
+
+hide_streamlit_style = """ <style>
+          #MainMenu {visibility: hidden;}
+          header {visibility: hidden;}
+          footer {visibility: hidden;}
+          </style>"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
