@@ -64,7 +64,7 @@ def plot_metrics(metrics_list, model, x_test, y_test, class_names):
 
 def main():
     st.sidebar.subheader("Binary Classification")
-    st.title("Are your mushrooms edible or poisonous? 🍄")
+    st.subheader("Are your mushrooms edible or poisonous? 🍄")
 
     df = load_data()
 
