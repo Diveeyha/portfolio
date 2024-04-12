@@ -2,3 +2,4 @@ matplotlib
 scikit-learn
 PyQt5
 simpleaudio
+scikit-image
