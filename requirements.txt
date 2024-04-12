@@ -1,6 +1,7 @@
 matplotlib
 scikit-learn
+scikit-image
 PyQt5
 simpleaudio
-scikit-image
+soundfile
 moviepy
